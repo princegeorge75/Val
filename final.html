@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Destination</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container" id="finalContainer">
+<h1>💖 Destination: Forever 💖</h1>
+
+<p>
+Through every cloud,
+every melody,
+every laugh,
+and every mile flown —
+I choose you.
+Again.
+And again.
+And again.
+</p>
+
+<img src="media/img9.jpg">
+
+<h2>Will You Be My Valentine?</h2>
+
+<div style="margin-top:20px;">
+<button id="yesBtn" class="button">YES ❤️</button>
+<button id="noBtn" class="button" style="background:gray;">No 😢</button>
+</div>
+
+<div class="nav-buttons" style="margin-top:30px;">
+<a href="page8.html">⬅ Previous</a>
+</div>
+
+</div>
+
+<script>
+let yesBtn = document.getElementById("yesBtn");
+let noBtn = document.getElementById("noBtn");
+
+let noScale = 1;
+let yesScale = 1;
+let clickCount = 0;
+
+noBtn.addEventListener("click", function() {
+
+    clickCount++;
+
+    // Shrink NO button gradually
+    noScale -= 0.2;
+    if (noScale > 0) {
+        noBtn.style.transform = "scale(" + noScale + ")";
+    }
+
+    // Grow YES button slightly
+    yesScale += 0.1;
+    yesBtn.style.transform = "scale(" + yesScale + ")";
+
+    // After 5 clicks, remove NO button completely
+    if (clickCount >= 5) {
+        noBtn.style.display = "none";
+    }
+});
+
+yesBtn.addEventListener("click", function() {
+
+    document.getElementById("finalContainer").innerHTML = `
+        <h1>She Said YES! ❤️✈️🎶</h1>
+
+        <p>
+        Our love is officially cleared for takeoff.
+        No delays.
+        No cancellations.
+        Just you and me — forever.
+        </p>
+
+        <img src="media/us.png">
+
+        <p style="margin-top:20px;">
+        Happy Valentine's Day, my co-pilot. 💕 
+        </p>
+        <h1>The End </h1>
+    `;
+});
+</script>
+
+</body>
+</html>
