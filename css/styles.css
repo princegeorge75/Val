@@ -1,3 +1,15 @@
+/* Different bright backgrounds */
+
+.index { background: #ff4d6d; }      /* romantic red */
+.page2 { background: #ffb703; }      /* warm gold */
+.page3 { background: #00c2ff; }      /* sky blue */
+.page4 { background: #9b5de5; }      /* purple */
+.page5 { background: #f15bb5; }      /* pink */
+.page6 { background: #00f5d4; }      /* teal */
+.page7 { background: #fb5607; }      /* orange */
+.page8 { background: #3a86ff; }      /* royal blue */
+.final { background: #ff006e; }      /* dramatic love pink */
+
 * {
     margin: 0;
     padding: 0;
@@ -90,4 +102,18 @@ img, video {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#yesBtn {
+    animation: pulse 1.5s infinite;
 }
